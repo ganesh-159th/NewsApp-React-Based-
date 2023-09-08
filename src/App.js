@@ -8,12 +8,13 @@ import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
   pageSize = 15;
-  state ={
+  apiKey = "f9755094e03240f6955a90548e0d813d";
+  state = {
     progress: 20,
-  }
-  setProgress=(progress)=>{
-    this.setState({progress: progress})
-  }
+  };
+  setProgress = (progress) => {
+    this.setState({ progress: progress });
+  };
   render() {
     return (
       <div>
@@ -27,7 +28,8 @@ export default class App extends Component {
               exact
               path="/"
               element={
-                <News setProgress ={this.setProgress}
+                <News
+                  setProgress ={this.setProgress}  apiKey ={this.apiKey}
                   key="general"
                   pageSize={this.pageSize}
                   country="in"
@@ -39,7 +41,8 @@ export default class App extends Component {
               exact
               path="/bussiness"
               element={
-                <News setProgress ={this.setProgress}
+                <News
+                  setProgress ={this.setProgress}  apiKey ={this.apiKey}
                   key="business"
                   pageSize={this.pageSize}
                   country="in"
@@ -51,7 +54,8 @@ export default class App extends Component {
               exact
               path="/entertainment"
               element={
-                <News setProgress ={this.setProgress}
+                <News
+                  setProgress ={this.setProgress}  apiKey ={this.apiKey}
                   key="enterainment"
                   pageSize={this.pageSize}
                   country="in"
@@ -64,7 +68,8 @@ export default class App extends Component {
               exact
               path="/health"
               element={
-                <News setProgress ={this.setProgress}
+                <News
+                  setProgress ={this.setProgress}  apiKey ={this.apiKey}
                   key="health"
                   pageSize={this.pageSize}
                   country="in"
@@ -76,7 +81,8 @@ export default class App extends Component {
               exact
               path="/science"
               element={
-                <News setProgress ={this.setProgress}
+                <News
+                  setProgress ={this.setProgress}  apiKey ={this.apiKey}
                   key="science"
                   pageSize={this.pageSize}
                   country="in"
@@ -88,7 +94,8 @@ export default class App extends Component {
               exact
               path="/sports"
               element={
-                <News setProgress ={this.setProgress}
+                <News
+                  setProgress ={this.setProgress}  apiKey ={this.apiKey}
                   key="sports"
                   pageSize={this.pageSize}
                   country="in"
@@ -100,7 +107,8 @@ export default class App extends Component {
               exact
               path="/technology"
               element={
-                <News setProgress ={this.setProgress}
+                <News
+                  setProgress ={this.setProgress}  apiKey ={this.apiKey}
                   key="technology"
                   pageSize={this.pageSize}
                   country="in"
